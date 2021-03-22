@@ -23,11 +23,10 @@
     <!-- NAVBAR -->
     <div class="container navbar-contain">
         <nav class="navbar navbar-expand-lg navbar-light ">
-            <a class="navbar-brand" href="index.html">Lunch app</a>
+            <a class="navbar-brand" href="../views/mainPage.php">Lunch app</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
@@ -48,36 +47,4 @@
                 </form>
             </div>
         </nav>
-    </div>
-
-    <!-- JUMBOTRON -->
-
-    <div class="container mktImage">
-        <div class="row align-items-center justify-content-start">
-            <div class="col-lg-7 px-0">
-                <img src="../images/jumbotron.jpg" alt="jumbotron image" class="img-fluid grow">
-            </div>
-            <div class="col-lg-5 article-preview">
-                <p class="article-category-small infoTitleMkt">Lunch Ideas</p>
-                <a href="https://www.o-ren-ishii.com/">
-                    <h2 class="article-title-big my-5">Quinoa Sweet Potato Salat</h2>
-                </a>
-                <div class="d-flex flex-row pt-3 extraInfoMkt">
-                    <div class=" align-items-center pl-2 pr-2">
-                        <span class="material-icons md-40 pb-1">🚶‍♀️</span>
-                        <p>10 min</p>
-                    </div>
-                    <div class="align-items-center pl-2 pr-2">
-                        <span class="material-icons-outlined md-40 pb-1">💰</span>
-                        <p>günstig</p>
-                    </div>
-                    <div class="align-items-center pl-2 pr-2">
-                        <span class="material-icons-outlined md-40 pb-1">🥬</span>
-                        <p>Veggietauglich</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-
     </div>
