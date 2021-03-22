@@ -1,4 +1,5 @@
-<?php include('../database/connection.php');
+<?php
+include('../database/connection.php');
 include('../elements/header.php');
 include('../elements/jumbotron.php') ?>
 
@@ -8,12 +9,12 @@ include('../elements/jumbotron.php') ?>
         <h2>Kategorien - Filter</h2>
         <div class="d-flex justify-content-start">
             <div class="myBtnContainer">
-                <a href="#result" role="button" class="btn btn-lg mr-2 mb-2 grow">Alles</a>
-                <a href="#result" role="button" class="btn btn-lg mr-2 mb-2 grow">Burger</a>
-                <a href="#result=<?php $sql = "SELECT * FROM restaurants WHERE categories = 'pizza, pasta';"; ?>" role="button" class="btn btn-lg mr-2 mb-2 grow">Pizza/Pasta</a>
-                <a href="#result" role="button" class="btn btn-lg mb-2 grow">Asiatisch</a>
-                <a href="#result" role="button" class="btn btn-lg mr-2 mb-2 grow">Hausmannskost</a>
-                <a href="#result" role="button" class="btn btn-lg mb-2 grow">Sonstiges</a>
+                <a href="?categories=alles" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['categories'] == 'alles' ? 'active' : '' ?>">Alles</a>
+                <a href="?categories=burger" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['categories'] == 'burger' ? 'active' : '' ?>">Burger</a>
+                <a href="?categories=pizza pasta" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['categories'] == 'pizza pasta' ? 'active' : '' ?>">Pizza/Pasta</a>
+                <a href="?categories=asiatisch" role="button" class="btn btn-lg mb-2 grow <?= $_GET['categories'] == 'asiatisch' ? 'active' : '' ?>">Asiatisch</a>
+                <a href="?categories=hausmannskost" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['categories'] == 'hausmannskost' ? 'active' : '' ?>">Hausmannskost</a>
+                <a href="?categories=sonstiges" role="button" class="btn btn-lg mb-2 grow <?= $_GET['categories'] == 'sonstiges' ? 'active' : '' ?>">Sonstiges</a>
             </div>
         </div>
     </div>
@@ -23,20 +24,20 @@ include('../elements/jumbotron.php') ?>
     <div class="row d-flex flex-column">
         <h2 class="d-flex justify-content-start">Entfernung</h2>
         <div class="md-6 xl-6 d-flex justify-content-start">
-            <div class="myBtnContainer">
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">egal</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">nicht so weit weg</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">ganz nah dran</a>
+            <div class="myBtnContainer d-flex justify-content-start">
+                <a href="?distance_stars=3" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['distance_stars'] == 3 ? 'active' : '' ?>">egal ⭐ ⭐ ⭐</a>
+                <a href="?distance_stars=2" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['distance_stars'] == 2 ? 'active' : '' ?>">mittel ⭐ ⭐</a>
+                <a href="?distance_stars=1" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['distance_stars'] == 1 ? 'active' : '' ?>">nah ⭐</a>
             </div>
         </div>
     </div>
     <div class="row d-flex flex-column ml-5">
         <h2 class="d-flex justify-content-end">Preis</h2>
         <div class="md-6 xl-6 d-flex justify-content-end">
-            <div class="myBtnContainer">
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">egal</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">nicht zu viel</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">Ende des Monats</a>
+            <div class="myBtnContainer d-flex justify-content-end">
+                <a href="?price_stars=3" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['price_stars'] == 3 ? 'active' : '' ?>">egal ⭐ ⭐ ⭐</a>
+                <a href="?price_stars=2" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['price_stars'] == 2 ? 'active' : '' ?>">mittel ⭐ ⭐</a>
+                <a href="?price_stars=1" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['price_stars'] == 1 ? 'active' : '' ?>">günstig ⭐</a>
             </div>
         </div>
     </div>
@@ -47,9 +48,9 @@ include('../elements/jumbotron.php') ?>
         <h2>Veggietauglich</h2>
         <div class="d-flex justify-content-start">
             <div class="myBtnContainer">
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">wenig veggie</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">mittel veggie Auswahl</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">gute veggie Auswahl</a>
+                <a href="?veggie_stars=3" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['veggie_stars'] == 3 ? 'active' : '' ?>">wenig veggie</a>
+                <a href="?veggie_stars=2" role="button" class="btn btn-lg mr-2 mb-2 grow <?= $_GET['veggie_stars'] == 2 ? 'active' : '' ?>">mittel veggie Auswahl</a>
+                <a href="?veggie_stars=1" role="button" class="btn btn-lg mr-2 mb-2 grow  <?= $_GET['veggie_stars'] == 1 ? 'active' : '' ?>">gute veggie Auswahl</a>
             </div>
         </div>
     </div>
@@ -58,7 +59,19 @@ include('../elements/jumbotron.php') ?>
 <div class="container mt-5">
     <h2 id="result">Ergebnisse </h2>
     <?php
-    $sql = "SELECT * FROM restaurants";
+    if (isset($_GET['categories'])) {
+        $sql = "SELECT * FROM restaurants WHERE categories='$_GET[categories]'";
+    } else if (isset($_GET['distance_stars'])) {
+        $sql = "SELECT * FROM restaurants WHERE distance_stars='$_GET[distance_stars]'";
+    } else if (isset($_GET['price_stars'])) {
+        $sql = "SELECT * FROM restaurants WHERE price_stars='$_GET[price_stars]'";
+    } else if (isset($_GET['veggie_stars'])) {
+        $sql = "SELECT * FROM restaurants WHERE veggie_stars='$_GET[veggie_stars]'";
+    } else {
+        $sql = "SELECT * FROM restaurants";
+    }
+
+
     $result = mysqli_query($link, $sql);
 
     if ($result) {
@@ -72,4 +85,5 @@ include('../elements/jumbotron.php') ?>
     }
 
     ?>
+    <a class="btn btn-lg mr-2 mb-2 grow" href="?">Reset</a>
 </div>
