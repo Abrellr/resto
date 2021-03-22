@@ -24,7 +24,7 @@ include('../elements/jumbotron.php') ?>
         <h2 class="d-flex justify-content-start">Entfernung</h2>
         <div class="md-6 xl-6 d-flex justify-content-start">
             <div class="myBtnContainer">
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">Egal</a>
+                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">egal</a>
                 <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">nicht so weit weg</a>
                 <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">ganz nah dran</a>
             </div>
@@ -34,9 +34,9 @@ include('../elements/jumbotron.php') ?>
         <h2 class="d-flex justify-content-end">Preis</h2>
         <div class="md-6 xl-6 d-flex justify-content-end">
             <div class="myBtnContainer">
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">Egal</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">nicht so weit weg</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">ganz nah dran</a>
+                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">egal</a>
+                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">nicht zu viel</a>
+                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">Ende des Monats</a>
             </div>
         </div>
     </div>
@@ -47,9 +47,9 @@ include('../elements/jumbotron.php') ?>
         <h2>Veggietauglich</h2>
         <div class="d-flex justify-content-start">
             <div class="myBtnContainer">
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">Egal</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">sollte schon schmecken</a>
-                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">muss ganz lecker sein</a>
+                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">wenig veggie</a>
+                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">mittel veggie Auswahl</a>
+                <a href="" role="button" class="btn btn-lg mr-2 mb-2 grow">gute veggie Auswahl</a>
             </div>
         </div>
     </div>
